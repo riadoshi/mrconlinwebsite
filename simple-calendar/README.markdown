@@ -1,4 +1,5 @@
-# Simple Calendar
- _A Pen created at CodePen.io. Original URL: [https://codepen.io/jpag82/pen/Nazayx](https://codepen.io/jpag82/pen/Nazayx).
+# Mr Conlin's Website
+ 
+ Code used with permission from: (https://codepen.io/jpag82/pen/Nazayx).
 
  
