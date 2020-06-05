@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+
+</head>
+
+<!-- CSS -->
+<style>
+
+.bigRoundButton {
+  display: block;
+  width: 15%;
+  height:10%;
+  border: none;
+  background-color: #e3e3e3;
+  font-size: 16px;
+  font-family:'Oswald';
+  cursor: pointer;
+  text-align: center;
+  border-radius:30px;
+}
+.bigRoundButton:hover {
+  background-color: #d9d9d9;
+}
+button:focus {
+  outline:none;
+  box-shadow: none;
+}
+
+
+</style>
+
+<body style = "background-color:#f2f2f2" onload = "typeWriter()">
+
+  <!-- navigation bar -->
+  <nav class="navbar navbar-default" style = "background-color:#e3e3e3; border:none; padding:10px">
+    <div class="container-fluid" style = "border:none">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html" style = "color:black; font-size:20px;font-weight:800; font-family:'Oswald'; letter-spacing: 2px">MR. CONLIN</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+              <a class="nav-link" href = "javascript:void(0)" onclick= "switchClassC()" style = "color:black; font-size:20px;font-weight:800; font-family:'Oswald'; letter-spacing: 2px">CALC BC</a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link" href = "javascript:void(0)" onclick= "switchClassJ()" style = "color:black; font-size:20px;font-weight:800; font-family:'Oswald'; letter-spacing: 2px; background-color: #c7c7c7b0">JAVA</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Welcome Screen Effect -->
+  <p style = "text-align:center;font-family:'Oswald'; font-size:50px; color:black; font-weight:100">Java Calendar</p>
+
+  <p style = "position:absolute; left:22%; top:26%; font-family:'Oswald'; font-size:20px; color:black; font-weight:100">First Semester:</p>
+
+  <button class = "bigRoundButton" style = "position:absolute; left:22%; top:33%;" onclick = "changePage('august_java.html')">August</button>
+ <button class = "bigRoundButton" style = "position:absolute; left:42%; top:33%;" onclick = "changePage('september_java.html')">September</button>
+ <button class = "bigRoundButton" style = "position:absolute; left:62%; top:33%;" onclick = "changePage('october_java.html')">October</button>
+ <button class = "bigRoundButton" style = "position:absolute; left:32%; top:45%;" onclick = "changePage('november_java.html')">November</button>
+ <button class = "bigRoundButton" style = "position:absolute; left:52%; top:45%;" onclick = "changePage('december_java.html')">December</button>
+
+
+ <p style = "position:absolute; left:22%; top:58%; font-family:'Oswald'; font-size:20px; color:black; font-weight:100">Second Semester:</p>
+  
+  <button class = "bigRoundButton" style = "position:absolute; left:22%; top:65%;" onclick = "changePage('january_java.html')">January</button>
+ <button class = "bigRoundButton" style = "position:absolute; left:42%; top:65%;" onclick = "changePage('february_java.html')">February</button>
+ <button class = "bigRoundButton" style = "position:absolute; left:62%; top:65%;" onclick = "changePage('march_java.html')">March</button>
+ <button class = "bigRoundButton" style = "position:absolute; left:22%; top:77%;" onclick = "changePage('april_java.html')">April</button>
+ <button class = "bigRoundButton" style = "position:absolute; left:42%; top:77%;" onclick = "changePage('may_java.html')">May</button>
+ <button class = "bigRoundButton" style = "position:absolute; left:62%; top:77%;" onclick = "changePage('june_java.html')">June</button>
+
+  <script>
+  var i = 0;
+  var txt = 'welcome.';
+  var speed = 100;
+
+  function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById("welcome").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  function changePage(page) {
+    window.location.href = page;
+  }
+
+  function switchClassC() {
+    var dateClass = new Date();
+    var month = dateClass.getMonth() + 1; 
+    var url = "";
+    if(month == 1) {
+      url = "../calc/january_calc.html"
+    }
+    if(month == 2) {
+      url = "../calc/february_calc.html"
+    }
+    if(month == 3) {
+      url = "../calc/march_calc.html"
+    }
+    if(month == 4) {
+      url = "../calc/april_calc.html"
+    }
+    if(month == 5) {
+      url = "../calc/may_calc.html"
+    }
+    if(month == 6) {
+      url = "../calc/june_calc.html"
+    }
+    if(month == 8) {
+      url = "../calc/august_calc.html"
+    }
+    if(month == 9) {
+      url = "../calc/september_calc.html"
+    }
+    if(month == 10) {
+      url = "../calc/october_calc.html"
+    }
+    if(month == 11) {
+      url = "../calc/novemeber_calc.html"
+    }
+    if(month == 12) {
+      url = "../calc/december_calc.html"
+    }
+    window.location.href = url;
+  }
+
+  function switchClassJ() {
+    var dateClass = new Date();
+    var month = dateClass.getMonth() + 1; 
+    var url = "";
+    if(month == 1) {
+      url = "january_java.html"
+    }
+    if(month == 2) {
+      url = "february_java.html"
+    }
+    if(month == 3) {
+      url = "march_java.html"
+    }
+    if(month == 4) {
+      url = "april_java.html"
+    }
+    if(month == 5) {
+      url = "may_java.html"
+    }
+    if(month == 6) {
+      url = "june_java.html"
+    }
+    if(month == 8) {
+      url = "august_java.html"
+    }
+    if(month == 9) {
+      url = "september_java.html"
+    }
+    if(month == 10) {
+      url = "october_java.html"
+    }
+    if(month == 11) {
+      url = "novemeber_java.html"
+    }
+    if(month == 12) {
+      url = "december_java.html"
+    }
+    window.location.href = url;
+  }
+  </script>
+
+
+
+</body>
+</html>
