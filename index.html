@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+  <title> Mr. Conlin's Website </title>
+</head>
+
+<!-- CSS -->
+<style>
+
+.bigRoundButton {
+  width: 170px;
+  height:75px;
+  border: none;
+  background-color: #d9d9d9;
+  font-size: 20px;
+  font-family:'Oswald';
+  cursor: pointer;
+  text-align: center;
+  border-radius:30px;
+  margin-left:auto;
+  margin-right:auto;
+  -webkit-box-shadow: 4px 4px 8px 1px #e8e8e8;
+  -moz-box-shadow: 2px 2px 8px 1px #e8e8e8;
+  border-color: #cccccc;
+  border-width: 1px;
+  border-style: solid;
+}
+
+/*.calcButton{float:left;margin-left:30%;}
+.javaButton{float:right;margin-right:30%;}*/
+
+
+.bigRoundButton:hover {
+  background-color:#90caf9;
+}
+
+.cont{
+  text-align:center; 
+  position:relative; 
+  min-width:400px;
+  width:130%;
+
+}
+
+button:focus {
+  outline:none;
+  box-shadow: none;
+}
+
+img {
+  vertical-align:none;
+}
+
+</style>
+
+<body style = "background-color:#f2f2f2" onload = "typeWriter()">
+
+<!-- ************************************************************************ -->
+
+ 
+  <!-- navigation bar -->
+  <nav class="navbar navbar-default" style = "background-color:#e3e3e3; border:none; padding:10px">
+  <div class="container-fluid" style = "border:none">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html" style = "color:black; font-size:20px;font-weight:800; font-family:'Oswald'; letter-spacing: 2px">MR. CONLIN</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+            <a class="nav-link" href = "javascript:void(0)" onclick= "switchClassC()" style = "color:black; font-size:20px;font-weight:800; font-family:'Oswald'; letter-spacing: 2px">CALC BC</a>
+          </li>
+        <li class="nav-item">
+            <a class="nav-link" href = "javascript:void(0)" onclick= "switchClassJ()" style = "color:black; font-size:20px;font-weight:800; font-family:'Oswald'; letter-spacing: 2px">JAVA</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <div style = "text-align:center; position:relative">
+      <img src = "mv.jpeg" style = "vertical-align:top;display:inline-block; margin-left:auto; margin-right:auto;padding-top:50px; ">
+      <container style = "display:inline-block; margin-right:auto; margin-left:auto;">
+        <p style = "font-family:'Source Sans Pro'; text-align:center; font-size:20px;padding-bottom:5px; padding-top:100px; padding-left:20px">This year, I'm teaching AP Calculus BC and Java.</p>
+        <p style = "font-family:'Source Sans Pro';text-align:center; font-size:20px;padding-bottom:30px;padding-left:20px">Click to go to each class's home page.</p>
+        <div><button class = "bigRoundButton" onclick = "switchClassC()">CALC BC</button></div>
+        <br><br>
+        <div><button class = "bigRoundButton" onclick = "switchClassJ()">JAVA</button></div>
+      </container>
+    </div>
+  <!-- ************************************************************************ -->
+
+
+  <!-- JAVASCRIPT --> 
+  <script>
+  
+  function switchClassC() {
+    var dateClass = new Date();
+    var month = dateClass.getMonth() + 1; 
+    var url = "";
+    if(month == 1) {
+      url = "calc/january_calc.html"
+    }
+    if(month == 2) {
+      url = "calc/february_calc.html"
+    }
+    if(month == 3) {
+      url = "calc/march_calc.html"
+    }
+    if(month == 4) {
+      url = "calc/april_calc.html"
+    }
+    if(month == 5) {
+      url = "calc/may_calc.html"
+    }
+    if(month == 6) {
+      url = "calc/june_calc.html"
+      console.log(url);
+    }
+    if(month == 8 || month == 7) {
+      url = "calc/august_calc.html"
+    }
+    if(month == 9) {
+      url = "calc/september_calc.html"
+    }
+    if(month == 10) {
+      url = "calc/october_calc.html"
+    }
+    if(month == 11) {
+      url = "calc/novemeber_calc.html"
+    }
+    if(month == 12) {
+      url = "calc/december_calc.html"
+    }
+    window.location.href = url;
+  }
+
+  function switchClassJ() {
+    var dateClass = new Date();
+    var month = dateClass.getMonth() + 1; 
+    var url = "";
+    if(month == 1) {
+      url = "java/january_java.html"
+    }
+    if(month == 2) {
+      url = "java/february_java.html"
+    }
+    if(month == 3) {
+      url = "java/march_java.html"
+    }
+    if(month == 4) {
+      url = "java/april_java.html"
+    }
+    if(month == 5) {
+      url = "java/may_java.html"
+    }
+    if(month == 6) {
+      url = "java/june_java.html"
+    }
+    if(month == 8) {
+      url = "java/august_java.html"
+    }
+    if(month == 9) {
+      url = "java/september_java.html"
+    }
+    if(month == 10) {
+      url = "java/october_java.html"
+    }
+    if(month == 11) {
+      url = "java/novemeber_java.html"
+    }
+    if(month == 12) {
+      url = "java/december_java.html"
+    }
+    window.location.href = url;
+  }
+  </script>
+
+
+
+</body>
+</html>
